@@ -1,0 +1,6 @@
+MongoDB Server BTS
+==-==-==-==-==-==-==
+
+-> We always talk to the MongoDB server be it via the driver or the shell
+-> The server then talks to the storage engine
+-> The Storage Engine stores the data either in the Files (slow) or the memory (fast)
