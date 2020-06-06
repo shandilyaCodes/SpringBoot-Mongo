@@ -1,0 +1,31 @@
+MONGO-DB Setup on MAC OS (Catalina OS)
+==-==-==-==-==-==-==-==-==-==-==-==-==
+
+Mongo DB Installation on Catalina OS
+.....................................
+
+-> Install Homebrew
+-> brew tap mongodb/brew
+-> brew install mongodb-community
+-> sudo mkdir -p /System/Volumes/Data/data/db
+-> sudo chown -R `id -un` /System/Volumes/Data/data/db
+
+Using Mongodb
+..............
+-> brew services run mongodb-community
+{
+	Instead of run we can use start as well, but start will keep on MongoDB running in the background whether we use it or not
+}
+-> brew services list
+-> mongo (Enter the mongo shell)
+-> brew services stop mongodb-community
+
+
+Aliases
+.......
+
+alias mongod='brew services run mongodb-community'
+alias mongod-status='brew services list'
+alias mongod-stop='brew services stop mongodb-community'
+
+Note : In order to add the aliases as permanent add them to the zsh profile and source
