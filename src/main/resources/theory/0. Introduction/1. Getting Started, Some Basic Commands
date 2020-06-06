@@ -1,0 +1,21 @@
+GETTING STARTED
+==-==-==-==-==-==
+
+-> show dbs {
+    => Shows the list of data bases
+}
+
+-> use dbname {
+    => Start using/connect to the db with the name "dbname"
+    => If the db with the name "dbname" not present then it is automatically created
+}
+
+-> db.collectionName.insertOne({json}) {
+    => If there is no collection with the name collectionName in the chosen DB (one we are presently connected to), it
+       would be created and the insertOne would add the json to it
+}
+
+-> db.collectionName.find().pretty() {
+    => This command till find() prints the records of the collection
+    => Use of the pretty() shows the data in the formatted JSON structure
+}
